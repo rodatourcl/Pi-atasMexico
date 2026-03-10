@@ -168,7 +168,8 @@
                     </div>
                 </div>
                 <div class="text-center md:text-left">
-                    <div class="bg-pink-50 inline-block px-4 py-1 rounded-lg text-pink-500 font-bold mb-4 uppercase text-[10px] tracking-widest">Kreatywność & Pasja</div>
+                    <!-- Badge actualizado con traducción dinámica -->
+                    <div data-i18n="story.badge" class="bg-pink-50 inline-block px-4 py-1 rounded-lg text-pink-500 font-bold mb-4 uppercase text-[10px] tracking-widest">Kreatywność & Pasja</div>
                     <h2 data-i18n="story.title" class="text-4xl md:text-6xl font-black mb-8 leading-tight text-stone-900">Moja Historia</h2>
                     <p data-i18n="story.text" class="text-lg md:text-xl text-stone-600 leading-relaxed mb-10">
                         Wszystko zaczęło się od pasji i chęci dzielenia się uśmiechem. W moim studiu w Krakowie każda piniata powstaje z dbałością o detale, łącząc tradycję z wyobraźnią.
@@ -191,7 +192,8 @@
     <!-- Gallery Section -->
     <section id="gallery" class="py-20 md:py-32">
         <div class="max-w-6xl mx-auto px-4 text-center mb-12 md:mb-20">
-            <span class="text-orange-500 font-black uppercase text-[10px] tracking-widest mb-4 block underline decoration-pink-500 decoration-4">Portfel Prac</span>
+            <!-- Portfel Prac actualizado con traducción dinámica -->
+            <span data-i18n="gallery.badge" class="text-orange-500 font-black uppercase text-[10px] tracking-widest mb-4 block underline decoration-pink-500 decoration-4">Moje Projekty</span>
             <h2 data-i18n="gallery.title" class="text-4xl md:text-7xl font-black mb-6">Magiczna Galeria</h2>
             <p data-i18n="gallery.subtitle" class="text-lg md:text-xl text-stone-500 max-w-2xl mx-auto font-medium">Zainspiruj się naszymi unikalnymi projektami na niezapomniane chwile</p>
         </div>
@@ -304,9 +306,11 @@
                 "hero.badge": "Magia Meksyku w Krakowie 🇵🇱🇲🇽",
                 "hero.title": "Tradycyjne meksykańskie piniaty",
                 "hero.subtitle": "Dodaj koloru i magii swojemu wydarzeniu dzięki ręcznie robionej sztuce.",
+                "story.badge": "Kreatywność & Pasja",
                 "story.title": "Moja Historia",
                 "story.text": "Wszystko zaczęło się od pasji i chęci dzielenia się uśmiechem. W moim studiu w Krakowie każda piniata powstaje z dbałością o detale, łącząc tradycję z wyobraźnią.",
                 "story.stats.created": "Szczęśliwych klientów", "story.stats.handmade": "Ręczne wykonanie",
+                "gallery.badge": "Moje Projekty",
                 "gallery.title": "Magiczna Galeria", "gallery.subtitle": "Zainspiruj się naszymi unikalnymi projektami na niezapomniane chwile",
                 "contact.title": "Stwórzmy Twoją Piniatę!", "contact.subtitle": "Napisz do mnie i spraw radość swoim bliskim",
                 "contact.nameLabel": "Imię", "contact.emailLabel": "E-mail", "contact.phoneLabel": "Telefon", "contact.messageLabel": "Twój pomysł", "contact.send": "Wyślij mój pomysł",
@@ -325,9 +329,11 @@
                 "hero.badge": "Magia Mexicana en Cracovia 🇵🇱🇲🇽",
                 "hero.title": "Piñatas Tradicionales llenas de Color",
                 "hero.subtitle": "Dale vida y magia a tu evento con una pieza de arte hecha 100% a mano.",
+                "story.badge": "Creatividad & Pasión",
                 "story.title": "Mi Historia",
                 "story.text": "Todo comenzó con las ganas de compartir sonrisas. En mi taller en Cracovia, cada piñata se crea con dedicación, fusionando la tradición auténtica con tu imaginación.",
                 "story.stats.created": "Clientes Felices", "story.stats.handmade": "Hecho con Amor",
+                "gallery.badge": "Mis Proyectos",
                 "gallery.title": "Galería Mágica", "gallery.subtitle": "Inspírate con nuestros diseños exclusivos para momentos inolvidables",
                 "contact.title": "¡Hagamos realidad tu idea!", "contact.subtitle": "Contáctame hoy mismo para cotizar tu piñata personalizada",
                 "contact.nameLabel": "Nombre", "contact.emailLabel": "Correo", "contact.phoneLabel": "Teléfono", "contact.messageLabel": "Tu idea", "contact.send": "Enviar mi idea",
@@ -346,9 +352,11 @@
                 "hero.badge": "Mexican Magic in Krakow 🇵🇱🇲🇽",
                 "hero.title": "Traditional Mexican Piñatas",
                 "hero.subtitle": "Add color and magic to your event with a 100% handcrafted art piece.",
+                "story.badge": "Creativity & Passion",
                 "story.title": "My Story",
                 "story.text": "It all started with a passion for sharing smiles. In my Krakow studio, every piñata is created with care, blending tradition with imagination.",
                 "story.stats.created": "Happy Customers", "story.stats.handmade": "Handcrafted",
+                "gallery.badge": "My Projects",
                 "gallery.title": "Magic Gallery", "gallery.subtitle": "Get inspired by our unique designs for unforgettable moments",
                 "contact.title": "Let's Create Your Piñata!", "contact.subtitle": "Message me now to bring joy to your loved ones",
                 "contact.nameLabel": "Name", "contact.emailLabel": "Email", "contact.phoneLabel": "Phone", "contact.messageLabel": "Your Idea", "contact.send": "Send my idea",
@@ -473,12 +481,10 @@
                 submitBtn.innerHTML = originalHTML;
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('opacity-70');
-                
                 successMsg.classList.remove('hidden');
                 lucide.createIcons();
             })
-            .catch(error => {
-                console.error('Error:', error);
+            .catch(() => {
                 submitBtn.innerHTML = originalHTML;
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('opacity-70');
@@ -489,6 +495,7 @@
             successMsg.classList.add('hidden');
         }
 
+        // Initialize
         window.onload = () => {
             setLanguage('pl');
             lucide.createIcons();
